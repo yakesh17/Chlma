@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACC — Alangar Cricket Club Logo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #ff6a88; /* pink */
+      --bg2: #ff9a3c; /* orange */
+      --accent: #00d4ff; /* cyan */
+      --white: #ffffff;
+      --shadow: rgba(0,0,0,0.18);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(135deg,var(--bg1), var(--bg2));
+      padding:40px;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .card{
+      width:720px;
+      max-width:95vw;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      backdrop-filter: blur(6px) saturate(120%);
+      border-radius:20px;
+      box-shadow: 0 12px 30px var(--shadow);
+      padding:28px;
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+
+    .badge-wrap{
+      width:220px;
+      height:220px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 220px;
+    }
+
+    /* logo container */
+    .logo{
+      width:200px;
+      height:200px;
+    }
+
+    .meta{
+      color:var(--white);
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      justify-content:center;
+    }
+
+    .team-short{
+      font-family: 'Montserrat', sans-serif;
+      font-weight:900;
+      font-size:64px;
+      letter-spacing:4px;
+      line-height:1;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+      margin:0;
+    }
+
+    .team-long{
+      font-weight:600;
+      opacity:0.95;
+      margin:0;
+      font-size:18px;
+    }
+
+    .tagline{
+      margin-top:8px;
+      font-size:13px;
+      opacity:0.9;
+      color:rgba(255,255,255,0.95);
+    }
+
+    .controls{
+      margin-left:auto;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .btn{
+      background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.08);
+      color:var(--white);
+      padding:8px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:13px;
+    }
+
+    .small{font-size:12px;padding:6px 8px}
+
+    label{font-size:12px;color:rgba(255,255,255,0.9)}
+
+    .pickers{display:flex;gap:8px;align-items:center}
+
+    @media (max-width:600px){
+      .card{flex-direction:column;gap:14px;padding:18px}
+      .badge-wrap{width:160px;height:160px;flex:0 0 160px}
+      .team-short{font-size:44px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge-wrap">
+      <!-- SVG Logo -->
+      <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="svgLogo">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ff6a88" />
+            <stop offset="100%" stop-color="#ff9a3c" />
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#00d4ff" />
+            <stop offset="100%" stop-color="#6d00ff" />
+          </linearGradient>
+          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- circular badge -->
+        <g>
+          <circle cx="100" cy="100" r="92" fill="url(#g1)" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+          <circle cx="100" cy="100" r="70" fill="rgba(255,255,255,0.06)" />
+
+          <!-- stumps (silhouette) -->
+          <g transform="translate(
